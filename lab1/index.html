@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB LAB1</title>
+
+    <link rel="stylesheet" href="styles/morethan.css"/>
+    <link rel="stylesheet" href="styles/lessthan.css"/>
+ 
+    <script src="scripts/data.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+<body onload="osvjeziIndex()">
+    <div class="wrapper">
+        <div class="logotip">
+            <img src="images/logo-min.jpg">
+        </div>
+        <div class="header">
+            <div class="trenKategorija">
+                <p id="trenKategorija">Konji</p>
+            </div>
+            <div class="kosarica">
+                <a class="kolica" href="cart.html" onclick="spremiKategoriju()">
+                    <img src="images/kolica-min.jpg">
+                </a>
+                <p id="kosaricaCount"></p>
+                <img src="images/povecalo-min.jpg" class="povecalo">
+            </div>            
+        </div>
+        <div class="pozdrav">
+            <img src="images\pozdrav-min.jpg" id="veca">
+            <img src="images\pozdrav za header-min.jpg" id="manja">
+            <h1>DOBRODOŠLI NA WEBSHOP!</h1>
+        </div>
+
+        <div class="aside">
+            <div class="kategorije">
+                <button onclick="promjeniKategoriju('Konji')">Konji</button>
+                <button onclick="promjeniKategoriju('Kornjače')">Kornjače</button>
+                <button onclick="promjeniKategoriju('Mačke')">Mačke</button>
+                <button onclick="promjeniKategoriju('Patke')">Patke</button>
+                <button onclick="promjeniKategoriju('Psi')">Psi</button>
+                <button onclick="promjeniKategoriju('Ptice')">Ptice</button>
+                <button onclick="promjeniKategoriju('Ribe')">Ribe</button>
+                <button onclick="promjeniKategoriju('Zečevi')">Zečevi</button>
+                <button onclick="promjeniKategoriju('Domaće životinje')">Domaće životinje</button>
+                <button onclick="promjeniKategoriju('Egzotične životinje')">Egzotične životinje</button>
+            </div>                
+            <div class="poveznice">
+                <button>Kontakti</bottun>
+                <button>Newsletter</bottun>
+                <button>Pretplati se</bottun>                
+            </div>
+        </div>
+        
+        <div class="proizvodi">
+            <div class="slika1">
+                <img src="images/pexels-boys-in-bristol-photography-14346000-min.jpg", id="img1", class="slika">
+                <button onclick="dodajUKosaricu('p1')" class="buttonslika">
+                    <img src="images\kolica-min.jpg" class="slikahover">
+                </button>
+                <p id="pcounter1"></p>
+                <p id="p1">Konj 1</p>
+            </div>
+            <div class="slika2">
+                <img src="images/pexels-jose-aragones-2123375-min.jpg", id="img2", class="slika">
+                <button onclick="dodajUKosaricu('p2')" class="buttonslika">
+                    <img src="images\kolica-min.jpg" class="slikahover">
+                </button>
+                <p id="pcounter2"></p>
+                <p id="p2">Konj 2</p>
+            </div>
+            <div class="slika3">
+                <img src="images/pexels-lucas-kristoffersson-14108529-min.jpg", id="img3", class="slika">
+                <button onclick="dodajUKosaricu('p3')" class="buttonslika">
+                    <img src="images\kolica-min.jpg" class="slikahover">
+                </button>
+                <p id="pcounter3"></p>
+                <p id="p3">Konj 3</p>
+            </div>
+            <div class="slika4">
+                <img src="images/pexels-pixabay-53114-min.jpg", id="img4", class="slika">
+                <button onclick="dodajUKosaricu('p4')" class="buttonslika">
+                    <img src="images\kolica-min.jpg" class="slikahover">
+                </button>
+                <p id="pcounter4"></p>
+                <p id="p4">Konj 4</p>
+            </div>
+            <div class="slika5">
+                <img src="images/pexels-spencer-dowdeswell-7056768-min.jpg", id="img5", class="slika">
+                <button onclick="dodajUKosaricu('p5')" class="buttonslika">
+                    <img src="images\kolica-min.jpg" class="slikahover">
+                </button>
+                <p id="pcounter5"></p>
+                <p id="p5">Konj 5</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
