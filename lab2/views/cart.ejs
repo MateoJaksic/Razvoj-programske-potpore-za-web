@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB LAB1</title>
+
+    <link rel="stylesheet" href="/styles/kosarica.css">
+    <script src="/public/scripts/script.js"></script>
+</head>
+<body onload="osvjeziCart()">
+    <div class="wrapper">
+        <div class="logotip">
+            <a href="/home/getCategories"><img src="/images/logo-min.jpg" onclick=""></a>
+        </div>
+        <div class="header">
+            <div class="trenKategorija">
+                <p id="trenKategorija">Košarica</p>
+            </div>
+            <div class="kosarica">
+                <a class="kolica" href="/cart" onclick="spremiKategoriju()">
+                    <img src="/images/kolica-min.jpg">
+                </a>
+                <p id="kosaricaCount">5</p>
+                <img src="/images/povecalo-min.jpg" class="povecalo">
+            </div>            
+        </div>
+        <div class="main">
+            <p>KOŠARICA</p>
+            <div id="popis">
+                <p id="naziv">NAZIV PROIZVODA</p>
+                <p id="kolicina">KOLIČINA</p>
+            </div>
+        </div>
+    </div>
+</body>
+    

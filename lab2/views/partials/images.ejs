@@ -1,0 +1,12 @@
+<% for(let key in proizvodi) { %>
+    <% if (proizvodi.hasOwnProperty(key)) { %>
+        <div class="slikaUOkviru">
+            <img src=<%= proizvodi[key].image %> id="img1" class="slika">
+            <button onclick="dodajUKosaricu('p<%= parseInt(key) + 1%>')" class="buttonslika">
+                <img src="/images/kolica-min.jpg" class="slikahover">
+            </button>
+            <p id="p<%= parseInt(key) + 1 %>counter" ime="p<%= parseInt(key) + 1 %>"><%= proizvodi[key].value %></p>
+            <p id="p<%= parseInt(key) + 1 %>"><%= proizvodi[key].name %></p>
+        </div>
+    <% } %>
+<% } %> 

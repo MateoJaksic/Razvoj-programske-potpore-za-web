@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB LAB1</title>
+
+    <link rel="stylesheet" href="/styles/lessthan.css"/>
+    <link rel="stylesheet" href="/styles/morethan.css"/>
+ 
+    <script src="/public/scripts/script.js"></script>
+</head>
+<body onload="osvjeziIndex('<%= za_refresh %>')">
+    <div class="wrapper">
+        <div class="logotip">
+            <img src="/images/logo-min.jpg">
+        </div>
+        <%- include('./partials/header', { tren_kategorija: tren_kategorija }) %>
+        <div class="pozdrav">
+            <img src="/images/pozdrav-min.jpg" id="veca">
+            <img src="/images/pozdrav za header-min.jpg" id="manja">
+            <h1>DOBRODOŠLI NA WEBSHOP!</h1>
+        </div>
+
+        <div class="aside">
+            <div class="kategorije">
+                <% for(let key in kategorije) { %>
+                    <% if (kategorije.hasOwnProperty(key)) { %>
+                        <button onclick="getURL('/home/getProducts/<%= parseInt(key) + 1 %>')"> <%= kategorije[key].name %> </button>
+                    <% } %>
+                <% } %>  
+            </div>                
+            <div class="poveznice">
+                <button>Kontakti</bottun>
+                <button>Newsletter</bottun>
+                <button>Pretplati se</bottun>                
+            </div>
+        </div>
+        
+        <div class="proizvodi">
+            <p id="brojac"></p>
+            <p id="neprikazuj"> <%= id_kategorije %> </p>
+            <%- include('./partials/images', { proizvodi: proizvodi }) %>
+        </div>
+    </div>
+</body>
+</html>
